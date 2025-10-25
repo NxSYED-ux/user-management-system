@@ -27,7 +27,7 @@ export default function EditUserPage() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/users/${userId}`);
+        const response = await axios.get(`/api/users/${userId}`);
         setUserDetails(response.data.data);
         setForm(response.data.data);
       } catch (error) {

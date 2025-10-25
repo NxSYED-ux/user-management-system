@@ -78,7 +78,7 @@ export default function AddUserPage() {
     setErrors({});
 
     try {
-      await axios.post("http://localhost:3000/api/users", {
+      await axios.post("/api/users", {
         ...form,
         name: form.name.trim(),
         email: form.email.trim().toLowerCase()

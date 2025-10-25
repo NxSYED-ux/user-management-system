@@ -63,7 +63,7 @@ export function UserManagement() {
     const fetchUsers = async () => {
         try {
             setLoading(true);
-            const res = await axios.get<ApiResponse>("http://localhost:3000/api/users", {
+            const res = await axios.get<ApiResponse>("/api/users", {
                 params: {
                     page,
                     limit,
@@ -142,7 +142,7 @@ export function UserManagement() {
 
         try {
             setDeletingId(userToDelete.id);
-            await axios.delete(`http://localhost:3000/api/users/${userToDelete.id}`);
+            await axios.delete(`/api/users/${userToDelete.id}`);
 
             toast.success(`User ${userToDelete.name} deleted successfully`);
             fetchUsers();
