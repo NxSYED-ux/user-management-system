@@ -1,3 +1,5 @@
+import { UserManagement } from "@/components/UserManagement";
+
 export default function Page() {
-  return <div>User</div>;
+  return <UserManagement />;
 }
